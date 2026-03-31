@@ -14,9 +14,9 @@ datasource db {
 
 model User {
   id    Int    @id @default(autoincrement())
-  email String
+  email String @unique
   name  String
-  // posts Post[]
+  password String @default("temp_password")
   posts Post[]
 }
 
