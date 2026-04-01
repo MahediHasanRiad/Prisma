@@ -17,7 +17,7 @@ model User {
   email String @unique
   name  String
   password String @default("temp_password")
-  posts Post[]
+  posts Post[]  // it does not create any field, its a vertual relation ref for < Prisma >
 }
 
 model Post {
